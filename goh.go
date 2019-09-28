@@ -2,15 +2,15 @@ package goh
 
 // IncludeStrings replace a value with new value
 // and returns a new slice without modifying original.
-func Replace(values []int, old, new int) []int {
+func Replace(values []int, old, newValue int) []int {
 	result := make([]int, len(values))
 
 	for i, v := range values {
 		if v == old {
-			result[i] = new
-		} else {
-			result[i] = v
+			result[i] = newValue
+			continue
 		}
+		result[i] = v
 	}
 	return result
 }
