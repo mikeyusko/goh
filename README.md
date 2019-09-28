@@ -63,6 +63,14 @@ func main() {
 
 	// Checks if a two slices are equal
 	// true
-	goh.IntSliceEqual([]int{1, 2, 3}, []int{1, 2, 3})
+	goh.IntSliceEqual([]int{1, 2, 3}, []int{1, 2, 3}
 }
 ```
+
+## Contribution
+
+1. Fork the repo
+2. Create a new branch prefixed with feature/fix/refactoring/perf
+3. Make changes, also don't forget about tests:)
+4. Send a pull request
+5. Have a nice day:)
