@@ -63,6 +63,10 @@ func IncludeInt(values []int, value int) bool {
 
 // Between checks if a value is between two values in a slice.
 func Between(values []int, value, beforeValue, afterValue int) bool {
+	if len(values) == 2 || len(values) == 1 || len(values) == 0 {
+		return false
+	}
+
 	if len(values) == 3 {
 		for i, v := range values {
 			if (i == 1 && v == value) && values[i-1] == beforeValue && values[i+1] == afterValue {

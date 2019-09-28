@@ -100,6 +100,30 @@ func TestBetween(t *testing.T) {
 
 		assert.Equal(t, false, actual)
 	})
+
+	t.Run("return false if a slice has 2 values", func(t *testing.T) {
+		values := []int{1, 2}
+
+		actual := Between(values, 10, 2, 3)
+
+		assert.Equal(t, false, actual)
+	})
+
+	t.Run("return false if a slice has 1 value", func(t *testing.T) {
+		values := []int{1}
+
+		actual := Between(values, 10, 2, 3)
+
+		assert.Equal(t, false, actual)
+	})
+
+	t.Run("return false if a slice has 0 value", func(t *testing.T) {
+		values := make([]int, 0)
+
+		actual := Between(values, 10, 2, 3)
+
+		assert.Equal(t, false, actual)
+	})
 }
 
 func TestMapString(t *testing.T) {
