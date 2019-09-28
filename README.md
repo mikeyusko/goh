@@ -5,7 +5,7 @@ GO helpers - is a tiny-tidy library aims to avoid some default manipulations whi
 
 ## Examples
 
-```
+```go
 package main
 
 import (
