@@ -105,8 +105,8 @@ func TestMapInt(t *testing.T) {
 
 	actual := MapInt(
 		values, func(v int) int {
-		return v + 1
-	})
+			return v + 1
+		})
 
 	assert.Equal(t, expected, actual)
 }
