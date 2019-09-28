@@ -84,6 +84,22 @@ func TestBetween(t *testing.T) {
 
 		assert.Equal(t, false, actual)
 	})
+
+	t.Run("return false if value has 0 index", func(t *testing.T) {
+		values := []int{1, 2, 3, 5, 1, 10}
+
+		actual := Between(values, 1, 2, 3)
+
+		assert.Equal(t, false, actual)
+	})
+
+	t.Run("return false if value has the last index", func(t *testing.T) {
+		values := []int{1, 2, 3, 5, 1, 10}
+
+		actual := Between(values, 10, 2, 3)
+
+		assert.Equal(t, false, actual)
+	})
 }
 
 func TestMapString(t *testing.T) {
