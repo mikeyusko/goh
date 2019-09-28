@@ -1,4 +1,4 @@
-module goh
+module github.com/mikeyusko/goh
 
 go 1.13
 
