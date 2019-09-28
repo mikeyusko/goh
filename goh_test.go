@@ -9,7 +9,7 @@ func TestReplace(t *testing.T) {
 	values := []int{1, 2, 3, 4, 5}
 
 	expected := []int{1, 2, 3, 4, 6}
-	actual := Replace(&values, 5, 6)
+	actual := Replace(values, 5, 6)
 
 	assert.Equal(t, expected, actual)
 }
@@ -18,7 +18,7 @@ func TestFilterStrings(t *testing.T) {
 	values := []string{"Foo bar", "John Doe", "Tom"}
 
 	expected := []string{"Foo bar", "John Doe"}
-	actual := FilterStrings(&values, func(v string) bool {
+	actual := FilterStrings(values, func(v string) bool {
 		return len(v) > 3
 	})
 
@@ -29,7 +29,7 @@ func TestFilterInt(t *testing.T) {
 	values := []int{1, 12, 3, 5, 4, 2, 100, 111, 120}
 
 	expected := []int{111, 120}
-	actual := FilterInt(&values, func(v int) bool {
+	actual := FilterInt(values, func(v int) bool {
 		return v > 100
 	})
 
@@ -91,7 +91,7 @@ func TestMapString(t *testing.T) {
 
 	expected := []string{"Foo bar mapped", "John Doe mapped"}
 
-	actual := MapString(&values, func(v string) string {
+	actual := MapString(values, func(v string) string {
 		return v + " mapped"
 	})
 
@@ -103,7 +103,8 @@ func TestMapInt(t *testing.T) {
 
 	expected := []int{2, 3, 4, 5}
 
-	actual := MapInt(&values, func(v int) int {
+	actual := MapInt(
+		values, func(v int) int {
 		return v + 1
 	})
 
