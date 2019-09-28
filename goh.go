@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package goh
 
 // IncludeStrings replace a value with new value
 // and returns a new slice without modifying original.
