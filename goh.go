@@ -1,7 +1,5 @@
 package goh
 
-import "reflect"
-
 // IncludeStrings replace a value with new value
 // and returns a new slice without modifying original.
 func Replace(values []int, old, new int) []int {
@@ -97,10 +95,38 @@ func MapInt(values []int, f func(v int) int) []int {
 
 // StringSliceEqual checks if two slices of strings are equal
 func StringSliceEqual(f, s []string) bool {
-	return reflect.DeepEqual(f, s)
+	var resultCount int
+
+	if len(f) == len(s) {
+		for i, v := range f {
+			if v == s[i] {
+				resultCount++
+			}
+		}
+	}
+
+	if resultCount == len(f) {
+		return true
+	}
+
+	return false
 }
 
 // IntSliceEqual checks if two slices of integers are equal
 func IntSliceEqual(f, s []int) bool {
-	return reflect.DeepEqual(f, s)
+	var resultCount int
+
+	if len(f) == len(s) {
+		for i, v := range f {
+			if v == s[i] {
+				resultCount++
+			}
+		}
+	}
+
+	if resultCount == len(f) {
+		return true
+	}
+
+	return false
 }
