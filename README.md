@@ -1,4 +1,6 @@
 # goh
+[![Build Status](https://travis-ci.org/mikeyusko/goh.svg?branch=master)](https://travis-ci.org/mikeyusko/goh)
+
 
 GO helpers - is a tiny-tidy library aims to avoid some default manipulations which you are doing every day.
 
